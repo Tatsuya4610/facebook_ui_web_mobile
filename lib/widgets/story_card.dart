@@ -2,6 +2,7 @@ import 'package:facebook_ui_web_mobile/config/palette.dart';
 import 'package:facebook_ui_web_mobile/model/story_model.dart';
 import 'package:facebook_ui_web_mobile/model/user_model.dart';
 import 'package:facebook_ui_web_mobile/widgets/profile_avatar.dart';
+import 'package:facebook_ui_web_mobile/widgets/responsive.dart';
 import 'package:flutter/material.dart';
 
 class StoryCard extends StatelessWidget {
@@ -30,6 +31,15 @@ class StoryCard extends StatelessWidget {
           decoration: BoxDecoration(
             gradient: Palette.storyGradient,
             borderRadius: BorderRadius.circular(12.0),
+            boxShadow: Responsive.isDesktop(context)
+                ? [
+                    BoxShadow(
+                      color: Colors.black26,
+                      offset: Offset(0, 2),
+                      blurRadius: 4.0,
+                    ),
+                  ]
+                : null,
           ),
         ),
         Positioned(
@@ -66,8 +76,8 @@ class StoryCard extends StatelessWidget {
               color: Colors.white,
               fontWeight: FontWeight.bold,
             ),
-            maxLines: 2,  //テキストがオーバーフローしないよう予防。
-            overflow: TextOverflow.ellipsis,//オーバーフロー時は省略..
+            maxLines: 2, //テキストがオーバーフローしないよう予防。
+            overflow: TextOverflow.ellipsis, //オーバーフロー時は省略..
           ),
         ),
       ],

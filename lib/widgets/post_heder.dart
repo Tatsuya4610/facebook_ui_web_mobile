@@ -21,7 +21,10 @@ class PostHeader extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(post.user.name ,style: TextStyle(fontWeight: FontWeight.w700),),
+              Text(
+                post.user.name,
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
               Row(
                 children: <Widget>[
                   Text(
@@ -41,7 +44,10 @@ class PostHeader extends StatelessWidget {
             ],
           ),
         ),
-        IconButton(icon: Icon(Icons.more_horiz), onPressed: (){})
+        IconButton(
+          icon: Icon(Icons.more_horiz),
+          onPressed: () {},
+        )
       ],
     );
   }

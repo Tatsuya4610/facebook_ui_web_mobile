@@ -16,6 +16,13 @@ final List<User> onlineUsers = [
   User(name: 'マロン', image: AssetImage('assets/images/dog5.jpg')),
   User(name: 'ハナ', image: AssetImage('assets/images/dog6.jpg')),
   User(name: 'ムギ', image: AssetImage('assets/images/dog7.jpg')),
+  User(name: 'ポチ', image: AssetImage('assets/images/dog1.jpg')),
+  User(name: 'タマ', image: AssetImage('assets/images/dog2.jpg')),
+  User(name: 'シロ', image: AssetImage('assets/images/dog3.jpg')),
+  User(name: 'クロ', image: AssetImage('assets/images/dog4.jpg')),
+  User(name: 'ムギ', image: AssetImage('assets/images/dog7.jpg')),
+  User(name: 'ポチ', image: AssetImage('assets/images/dog1.jpg')),
+  User(name: 'タマ', image: AssetImage('assets/images/dog2.jpg')),
 ];
 
 final List<Story> stories = [
@@ -46,6 +53,14 @@ final List<Story> stories = [
   Story(
     user: onlineUsers[6],
     image: AssetImage('assets/images/dog7.jpg'),
+  ),
+  Story(
+    user: onlineUsers[2],
+    image: AssetImage('assets/images/dog2.jpg'),
+  ),
+  Story(
+    user: onlineUsers[3],
+    image: AssetImage('assets/images/dog4.jpg'),
   ),
 ];
 

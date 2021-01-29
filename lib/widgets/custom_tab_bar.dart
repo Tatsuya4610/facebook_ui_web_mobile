@@ -22,36 +22,38 @@ class CustomTabBar extends StatelessWidget {
       indicator: BoxDecoration(
         border: isBottomIndicator
             ? Border(
-          bottom: BorderSide(
-            color: Palette.facebookBlue,
-            width: 3.0,
-          ),
-        )
+                bottom: BorderSide(
+                  //デスクトップなら選択ボタンが上設置の為、ボーダーは下へ
+                  color: Palette.facebookBlue,
+                  width: 3.0,
+                ),
+              )
             : Border(
-          top: BorderSide(
-            color: Palette.facebookBlue,
-            width: 3.0,
-          ),
-        ),
+                top: BorderSide(
+                  color: Palette.facebookBlue,
+                  width: 3.0,
+                ),
+              ),
       ),
       tabs: icons
           .asMap() //Icon数にアクセスできる。
-          .map((i, e) => MapEntry(
-        i,
-        Tab(
-          icon: Icon(
-            e,
-            color: i == selectedIndex
-                ? Palette.facebookBlue
-                : Colors.black45,
-            size: 30.0,
-          ),
-        ),
-      ))
+          .map(
+            (i, e) => MapEntry(
+              i,
+              Tab(
+                icon: Icon(
+                  e,
+                  color: i == selectedIndex
+                      ? Palette.facebookBlue
+                      : Colors.black45,
+                  size: 30.0,
+                ),
+              ),
+            ),
+          )
           .values //マップを変換。
           .toList(),
       onTap: onTap,
     );
   }
 }
-

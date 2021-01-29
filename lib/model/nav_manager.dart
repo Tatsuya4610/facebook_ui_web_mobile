@@ -16,4 +16,15 @@ class NavManager extends ChangeNotifier {
   }
 
 
+  //スクロール追跡。 モバイルとデスクトップ画面のスクロール状態を共有する。
+  TrackingScrollController _trackingScrollController = TrackingScrollController();
+
+  TrackingScrollController get trackingScrollController => _trackingScrollController;
+
+  @override
+  void dispose() {
+    _trackingScrollController.dispose();
+    super.dispose();
+  }
+
 }

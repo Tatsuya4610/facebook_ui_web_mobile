@@ -1,5 +1,6 @@
 import 'package:facebook_ui_web_mobile/model/story_model.dart';
 import 'package:facebook_ui_web_mobile/model/user_model.dart';
+import 'package:facebook_ui_web_mobile/widgets/responsive.dart';
 import 'package:facebook_ui_web_mobile/widgets/story_card.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class StoriesContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Responsive.isDesktop(context) ? Colors.transparent : Colors.white,
       height: 200.0,
       child: ListView.builder(
         padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 8.0),
