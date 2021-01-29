@@ -1,10 +1,10 @@
 import 'package:facebook_ui_web_mobile/config/palette.dart';
-import 'package:facebook_ui_web_mobile/screens/home_screen.dart';
 import 'package:facebook_ui_web_mobile/screens/nav_Screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/all.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ProviderScope(child: MyApp()));
 }
 
 //Flutter for WebはBetaバージョンで使用する必要があります。
